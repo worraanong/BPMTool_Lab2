@@ -26,6 +26,10 @@ namespace BPMTool
             {
                 PromptQuit();
             }
+            if (IsValidFileExtension(fileInfo)?.ShowError() ?? false)
+            {
+                PromptQuit();
+            }
 
             Console.WriteLine($"Processing '{fileInfo.Name}'");
             Console.WriteLine("Pressing completed");
@@ -66,10 +70,19 @@ namespace BPMTool
             }
             return null;
         }
-
         public static Error IsValidFileExtension(FileInfo fileInfo)
         {
-            throw new NotImplementedException();
+            string extension = fileInfo.Extension.ToLower();
+            var isValid = extension == ".xes" || extension == ".csv";
+            if (!isValid)
+            {
+                return new Error(new List<string>
+                {
+                    "ERROR: The input file does not in XES or CSV format",
+                    $"File Extension {extension} is not support"
+                });
+            }
+            return null;
         }
     }
     public class Error
