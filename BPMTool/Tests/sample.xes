@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XES version 1.0 -->
+<!-- Created by Fluxicon Disco (fluxicon.com/disco) -->
+<!-- (c) 2020 by Fluxicon BV, Bomanshof 259, 5611 NS Eindhoven, The Netherlands -->
+<log xes.version="1.0" xmlns="http://www.xes-standard.org" xes.creator="Fluxicon Disco">
+	<extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+	<extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+	<extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+	<extension name="Organizational" prefix="org" uri="http://www.xes-standard.org/org.xesext"/>
+	<global scope="trace">
+		<string key="concept:name" value="name"/>
+		<string key="variant" value="string"/>
+		<int key="variant-index" value="0"/>
+	</global>
+	<global scope="event">
+		<string key="concept:name" value="name"/>
+		<string key="lifecycle:transition" value="transition"/>
+		<string key="org:resource" value="resource"/>
+		<date key="time:timestamp" value="2020-10-13T17:47:20.567+03:00"/>
+		<string key="Activity" value="string"/>
+		<string key="Resource" value="string"/>
+	</global>
+	<classifier name="Activity" keys="Activity"/>
+	<classifier name="Resource" keys="Resource"/>
+	<string key="lifecycle:model" value="standard"/>
+	<string key="creator" value="Fluxicon Disco"/>
+	<string key="library" value="Fluxicon Octane"/>
+	<trace>
+		<string key="concept:name" value="Case1"/>
+		<string key="variant" value="Variant 7"/>
+		<int key="variant-index" value="7"/>
+		<string key="creator" value="Fluxicon Disco"/>
+		<event>
+			<string key="concept:name" value="Start"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="Start"/>
+			<date key="time:timestamp" value="2012-01-30T06:24:00.000+02:00"/>
+			<string key="Activity" value="Start"/>
+			<string key="Resource" value="Start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Start"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="Start"/>
+			<date key="time:timestamp" value="2012-01-30T06:24:00.000+02:00"/>
+			<string key="Activity" value="Start"/>
+			<string key="Resource" value="Start"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4932"/>
+			<date key="time:timestamp" value="2012-01-30T06:24:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4932"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4932"/>
+			<date key="time:timestamp" value="2012-01-30T12:43:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4932"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4932"/>
+			<date key="time:timestamp" value="2012-01-30T12:44:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4932"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4932"/>
+			<date key="time:timestamp" value="2012-01-30T13:42:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4932"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4167"/>
+			<date key="time:timestamp" value="2012-01-30T13:59:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4167"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4167"/>
+			<date key="time:timestamp" value="2012-01-30T14:21:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4167"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4167"/>
+			<date key="time:timestamp" value="2012-01-30T14:21:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4167"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4167"/>
+			<date key="time:timestamp" value="2012-01-30T17:58:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling"/>
+			<string key="Resource" value="ID4167"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling Q.C."/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4163"/>
+			<date key="time:timestamp" value="2012-01-31T20:20:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling Q.C."/>
+			<string key="Resource" value="ID4163"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Turning &amp; Milling Q.C."/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4163"/>
+			<date key="time:timestamp" value="2012-01-31T21:50:00.000+02:00"/>
+			<string key="Activity" value="Turning &amp; Milling Q.C."/>
+			<string key="Resource" value="ID4163"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Laser Marking"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID0998"/>
+			<date key="time:timestamp" value="2012-02-01T15:18:00.000+02:00"/>
+			<string key="Activity" value="Laser Marking"/>
+			<string key="Resource" value="ID0998"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Laser Marking"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID0998"/>
+			<date key="time:timestamp" value="2012-02-01T15:27:00.000+02:00"/>
+			<string key="Activity" value="Laser Marking"/>
+			<string key="Resource" value="ID0998"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T07:00:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T07:00:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T08:15:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T08:15:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T16:05:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T16:05:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Round Grinding"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4445"/>
+			<date key="time:timestamp" value="2012-02-14T16:13:00.000+02:00"/>
+			<string key="Activity" value="Round Grinding"/>
+			<string key="Resource" value="ID4445"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T16:38:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Lapping"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4882"/>
+			<date key="time:timestamp" value="2012-02-14T17:20:00.000+02:00"/>
+			<string key="Activity" value="Lapping"/>
+			<string key="Resource" value="ID4882"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Round Grinding"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4445"/>
+			<date key="time:timestamp" value="2012-02-14T20:37:00.000+02:00"/>
+			<string key="Activity" value="Round Grinding"/>
+			<string key="Resource" value="ID4445"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Round Grinding"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4445"/>
+			<date key="time:timestamp" value="2012-02-14T20:37:00.000+02:00"/>
+			<string key="Activity" value="Round Grinding"/>
+			<string key="Resource" value="ID4445"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Round Grinding"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4445"/>
+			<date key="time:timestamp" value="2012-02-14T22:27:00.000+02:00"/>
+			<string key="Activity" value="Round Grinding"/>
+			<string key="Resource" value="ID4445"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T13:59:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T14:59:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T19:11:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T19:43:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T20:58:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Final Inspection Q.C."/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4493"/>
+			<date key="time:timestamp" value="2012-02-16T23:12:00.000+02:00"/>
+			<string key="Activity" value="Final Inspection Q.C."/>
+			<string key="Resource" value="ID4493"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Packing"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="ID4820"/>
+			<date key="time:timestamp" value="2012-02-17T07:00:00.000+02:00"/>
+			<string key="Activity" value="Packing"/>
+			<string key="Resource" value="ID4820"/>
+		</event>
+		<event>
+			<string key="concept:name" value="Packing"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="ID4820"/>
+			<date key="time:timestamp" value="2012-02-17T08:00:00.000+02:00"/>
+			<string key="Activity" value="Packing"/>
+			<string key="Resource" value="ID4820"/>
+		</event>
+		<event>
+			<string key="concept:name" value="End"/>
+			<string key="lifecycle:transition" value="start"/>
+			<string key="org:resource" value="End"/>
+			<date key="time:timestamp" value="2012-02-17T08:00:00.000+02:00"/>
+			<string key="Activity" value="End"/>
+			<string key="Resource" value="End"/>
+		</event>
+		<event>
+			<string key="concept:name" value="End"/>
+			<string key="lifecycle:transition" value="complete"/>
+			<string key="org:resource" value="End"/>
+			<date key="time:timestamp" value="2012-02-17T08:00:00.000+02:00"/>
+			<string key="Activity" value="End"/>
+			<string key="Resource" value="End"/>
+		</event>
+	</trace>
+</log>

@@ -1,12 +1,19 @@
 ﻿using System;
+using System.IO;
 
 namespace BPMTool
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
+
+        public static string IsFileExists(FileInfo fileInfo)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

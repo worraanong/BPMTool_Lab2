@@ -1,0 +1,2 @@
+Requirements:
+1. The system must handle the case "file not found" and display the error message to the user.
