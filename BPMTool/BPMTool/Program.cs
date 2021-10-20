@@ -66,6 +66,11 @@ namespace BPMTool
             }
             return null;
         }
+
+        public static Error IsValidFileExtension(FileInfo fileInfo)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class Error
     {
