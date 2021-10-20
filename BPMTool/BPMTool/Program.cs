@@ -84,6 +84,11 @@ namespace BPMTool
             }
             return null;
         }
+
+        public static Error IsValidXESFile(FileInfo fileInfo)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class Error
     {

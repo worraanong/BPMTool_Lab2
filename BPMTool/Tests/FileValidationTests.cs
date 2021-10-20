@@ -30,5 +30,18 @@ namespace Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(@"..\..\..\sample.xes", "")]
+        [InlineData(@"..\..\..\brokensample.xes", "ERROR: Malformed XES file")]
+        [InlineData(@"..\..\..\emptysample.xes", "ERROR: The input file does not contain any event log")]
+        public void Test3_ValidateXESFile(string filePath, string expected)
+        {
+            FileInfo fileInfo = new FileInfo(filePath);
+
+            var actual = IsValidXESFile(fileInfo)?.GetShortError() ?? string.Empty;
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

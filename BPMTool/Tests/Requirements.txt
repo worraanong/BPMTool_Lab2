@@ -1,3 +1,4 @@
 Requirements:
 1. The system must handle the case "file not found" and display the error message to the user.
 2. The system must handle the case "file not in XES or CSV format" and display the error message to the user.
+3. The system must handle the case "Malformed XES file" and display the error message to the user.
