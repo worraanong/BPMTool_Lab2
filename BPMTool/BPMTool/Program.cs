@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Xml;
 
 namespace BPMTool
 {
@@ -29,6 +30,13 @@ namespace BPMTool
             if (IsValidFileExtension(fileInfo)?.ShowError() ?? false)
             {
                 PromptQuit();
+            }
+            if (fileInfo.Extension.ToLower() == ".xes")
+            {
+                if (IsValidXESFile(fileInfo)?.ShowError() ?? false)
+                {
+                    PromptQuit();
+                }
             }
 
             Console.WriteLine($"Processing '{fileInfo.Name}'");
@@ -87,7 +95,31 @@ namespace BPMTool
 
         public static Error IsValidXESFile(FileInfo fileInfo)
         {
-            throw new NotImplementedException();
+            XmlDocument xmlDoc = new XmlDocument();
+            try
+            {
+                xmlDoc.Load(fileInfo.FullName);
+            }
+            catch (XmlException e)
+            {
+                return new Error(new List<string>
+                {
+                    "ERROR: Malformed XES file",
+                    e.Message
+                });
+            }
+
+            XmlNodeList events = xmlDoc.GetElementsByTagName("event");
+
+            var isValid = events.Count > 0;
+            if (!isValid)
+            {
+                return new Error(new List<string>
+                {
+                    "ERROR: The input file does not contain any event log"
+                });
+            }
+            return null;
         }
     }
     public class Error
