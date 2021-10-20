@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BPMTool
 {
@@ -7,40 +9,85 @@ namespace BPMTool
     {
         static void Main(string[] args)
         {
-            string path;
             if (args.Length != 0)
             {
-                path = args[0];
+                ProcessFile(args[0]);
             }
             else
             {
-                Console.WriteLine("Input a file path:");
-                path = Console.ReadLine();
-            }
-            FileInfo fileInfo = new FileInfo(path);
-            var err = IsFileExists(fileInfo);
-            if (err != null)
-            {
-                ShowError(err);
+                PromptProcessFile();
             }
         }
+        private static void ProcessFile(string filePath)
+        {
+            FileInfo fileInfo = new FileInfo(filePath);
 
-        public static string IsFileExists(FileInfo fileInfo)
+            if (IsFileExists(fileInfo)?.ShowError() ?? false)
+            {
+                PromptQuit();
+            }
+
+            Console.WriteLine($"Processing '{fileInfo.Name}'");
+            Console.WriteLine("Pressing completed");
+            Console.WriteLine("Sorry, we don't implement the output file yet");
+            PromptQuit();
+        }
+
+        private static void PromptProcessFile()
+        {
+            Console.WriteLine("Input a file path:");
+            string path = Console.ReadLine();
+            ProcessFile(path);
+        }
+
+        private static void PromptQuit()
+        {
+            Console.Write("Select new file? (y,n): ");
+            char ans = Console.ReadLine()[0];
+            if (ans == 'n' || ans == 'N')
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                PromptProcessFile();
+            }
+        }
+        public static Error IsFileExists(FileInfo fileInfo)
         {
             var isValid = fileInfo.Exists;
             if (!isValid)
             {
-                return "ERROR: File not found";
+                return new Error(new List<string>
+                {
+                    "ERROR: File not found",
+                    $"File '{fileInfo.FullName}' does not exist"
+                });
             }
-            return string.Empty;
-        }
-
-        public static void ShowError(string err)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(err);
-            Console.ResetColor();
+            return null;
         }
     }
+    public class Error
+    {
+        private List<string> Message { get; set; }
 
+        public Error(List<string> message)
+        {
+            Message = message;
+        }
+        public string GetShortError()
+        {
+            return (Message is null) ? string.Empty : Message.First();
+        }
+        public bool ShowError()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            foreach (var err in Message)
+            {
+                Console.WriteLine(err);
+            }
+            Console.ResetColor();
+            return true;
+        }
+    }
 }
