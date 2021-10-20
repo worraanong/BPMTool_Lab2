@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/BPMTool/.vs/BPMTool/v16
+/BPMTool/BPMTool/bin
+/BPMTool/BPMTool/obj
+/BPMTool/Tests/bin
+/BPMTool/Tests/obj
